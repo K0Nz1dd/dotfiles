@@ -1,0 +1,290 @@
+{
+  "reload_style_on_change": true,
+  "height": 30,
+  "margin-top": 8,
+  "margin-bottom": 0,
+  "margin-left": 12,
+  "margin-right": 12,
+  // "spacing":,
+  "layer": "top",
+  "position": "top",
+  "mode": "dock",
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "output": ["eDP-1", "HDMI-A-1"],
+
+  "modules-left": [
+    "hyprland/workspaces",
+    "network",
+    "bluetooth",
+    "wlr/taskbar",
+    "custom/screenshot",
+  ],
+
+  "modules-center": [
+    "custom/vpn",
+    "custom/spotify",
+  ],
+
+  "modules-right": [
+    "backlight",
+    "pulseaudio#input",
+    "pulseaudio#output",
+    "hyprland/language",
+    "battery",
+    "clock#date",
+    "clock",
+    "custom/power"
+  ],
+
+  "hyprland/workspaces": {
+    "all-outputs": false,
+    "on-click": "activate",
+    "persistent-workspaces": {
+      "eDP-1": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "HDMI-A-1": [
+        5,
+        6,
+        7,
+        8
+      ],
+    },
+    "format": "{icon}",
+    "format-icons": {
+      "urgent": "",
+      "focused": "",
+      "default": ""
+    }
+  },
+
+  "clock": {
+    "interval": 60,
+    // "timezone": "Europe/Kyiv",
+    "format": "{:%H:%M}",
+    "tooltip": false,
+  },
+  "clock#date": {
+	"interval": 60,
+  // "timezone": "Europe/Kyiv",
+	"format": "{:%m.%d %a}",
+  // "tooltip-format": "<tt><small>{calendar}</small></tt>",
+  "tooltip": false,
+  },
+
+
+  "battery": {
+    "interval": 60,
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}  {capacity}%",
+    "format-full": "{icon} {capacity}%",
+    "format-plugged": "{icon} {capacity}%",
+    "format-alt": "{icon}",
+    "format-icons": [
+      " ",
+      " ",
+      " ",
+      " "
+    ],
+    "tooltip": true,
+    "max-length": 25,
+  },
+
+  "hyprland/language": {
+    "format": "󰌌  {}",
+    "format-en": "EN",
+    "format-uk": "UA",
+    // "keyboard-name":  "at-translated-set-2-keyboard",
+    "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
+  },
+
+  "network": {
+    "interval": 1,
+    "format": "{ifname}%%",
+    "format-wifi": "  {bandwidthDownBytes}  {bandwidthUpBytes}",
+    "format-ethernet": "󰈀  {bandwidthDownBytes}  {bandwidthUpBytes} ",
+    "format-disconnected": "󰌙",
+    "tooltip-format": "{ipaddr}",
+    "format-linked": "󰈁 {ifname} (No IP)",
+    "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+    "tooltip-format-ethernet": "{ifname} 󰌘",
+    "tooltip-format-disconnected": "󰌙 Disconnected",
+    "max-length": 25,
+    "min-length": 10,
+    "format-icons": [
+      "󰤯",
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ]
+  },
+
+  "pulseaudio#input": {
+    "format": "{format_source}",
+    "format-source": "  {volume}%",
+    "format-source-muted": "  {volume}%",
+    "max-volume": 100,
+    "scroll-step": 1,
+    "smooth-scrolling-threshold": 1,
+    "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+    "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +1%",
+    "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%",
+    "tooltip": false
+  },
+
+  "pulseaudio#output": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "  {volume}%",
+    "format-bluetooth": "{icon}  {volume}% ",
+    "format-icons": {
+        "default": ["", "", ""],
+    },
+    "max-volume": 100,
+    "scroll-step": 5,
+    "smooth-scrolling-threshold": 1,
+    "on-click": "pavucontrol",
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "tooltip": false
+  },
+
+
+  "bluetooth": {
+    "format": " {status}",
+    "format-connected": " {device_alias}",
+    "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+    "on-click": "bluetuith",
+  },
+
+  "custom/screenshot": {
+    "format": "  ",
+    "tooltip": false,
+    // "tooltip-format": "Left click to select a region \nRight click to select from among active windows",
+    "on-click": "grim -g \"$(slurp)\" ~/screenshot_$(date +%Y%m%d_%H%M%S).png",
+    //  "on-click-right": "grim -g \"$(swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | \"\\(.rect.x+.window_rect.x),\\(.rect.y+.window_rect.y) \\(.window_rect.width)x\\(.window_rect.height)\"' | slurp)\"\n"
+    
+  },
+  
+  "custom/vpn":{
+    "interval":3,
+    "format": "{}",
+    "exec": "  ip add show | grep -qF wg0 &&  echo  󰿇 Connected ||  echo  󰌾 Disconnected",
+    "max-length": "100",
+    "on-click": "mullvad connect",
+    "on-click-right": "mullvad disconnect"
+  },
+  "custom/power": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "hyprlock",
+  },
+   "backlight": {
+    "format": "{icon}  {percent}%",
+    "format-icons": [
+      "󰪡",
+      "󰪥"
+    ],
+    "tooltip": false,
+  },
+  "custom/spotify": {
+  "exec": "/home/konzi/.config/scripts/envname/bin/python3  /home/konzi/.config/scripts/mediaplayer.py --player=spotify ",
+  "format": "{text}",
+  "format-disabled": "Inactive",
+  "return-type": "json",
+  "spacing": 0,
+  "margin": 0,
+  "max-length": 45,
+  "on-click": "playerctl play-pause",
+  "on-click-right": "spotify",
+  "on-scroll-up": "playerctl next",
+  "on-scroll-down": "playerctl previous"
+  },
+  "wlr/taskbar": {
+	"format": "{icon}",
+	"icon-size": 14,
+	"icon-theme": "Numix-Circle",
+	"tooltip-format":false,
+  "tooltip":false,
+	"on-click": "activate",
+	"on-click-middle": "close",
+	"ignore-list": [
+	    "Alacritty",
+      "code",
+      "thunar",
+      "obsidian",
+      "mullvad",
+      "btop",
+      "seahorse",
+      "pavucontrol",
+
+	],
+	"app_ids-mapping": {
+		"firefox": "firefox-developer-edition",
+    "telegram": "telegram",
+    "discord": "discord",
+    "obs": "obs",
+    "chrome": "google-chrome-stable"
+	},
+	"rewrite": {
+		"Firefox Web Browser": "Firefox",
+		"Foot Server": "Terminal"
+	}
+}
+
+}
+
+
+
+
+  //"custom/obs-status",
+  // chmod +x ~/.config/scripts/obs-status.sh
+  // "custom/obs-status": {
+  //       "format": "{}",
+  //       "return-type": "json", // Це може знадобитися, якщо ваш скрипт виводить JSON
+  //       "exec": "~/.config/waybar/scripts/obs-status.sh",
+  //       "interval": 2 // Перевіряти стан кожні 2 секунди
+  //   },
+
+  // "custom/power"
+  // "custom/power": {
+  //   "format": "⏻",
+  //   "tooltip-format": "Power",
+  //   "on-click": "~/.config/rofi/powermenu/type-1/powermenu.sh",
+  // },
+
+  // "backlight#monitor1",
+  //  "backlight#monitor1": {
+  //   "device": ["intel_backlight", "nvidia_backlight"],
+  //   "format": "{percent}% {icon}",
+  //   "format-icons": [
+  //     "󱎕",
+  //     ""
+  //   ]
+  // },
+  
+  //   "custom/spotify": {
+  //     "exec": "/home/konzi/.config/scripts/envname/bin/python3  /home/konzi/.config/scripts/mediaplayer.py --player=spotify ",
+  //     "format": "{text}",
+  //     // "interval": 30,
+  //     "return-type": "json",
+  //     "spacing": 0,
+  //     "margin": 0,
+  //     "max-length": 45,
+  //     "on-click": "playerctl play-pause",
+  //     "on-click-right": "spotify",
+  //     "on-scroll-up": "playerctl next",
+  //     "on-scroll-down": "playerctl previous"
+  // }
