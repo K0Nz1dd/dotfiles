@@ -1,0 +1,23 @@
+2026-07-30T15:30:59.379377Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=871733
+2026-07-30T15:30:59.379435Z  INFO herdr::client: connecting to server path=/home/konzi/.config/herdr/herdr-client.sock
+2026-07-30T15:30:59.616471Z  INFO herdr::client: handshake succeeded version=17 encoding=SemanticFrame
+2026-07-30T18:17:18.966047Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=1187329
+2026-07-30T18:17:18.966329Z  INFO herdr::client: connecting to server path=/home/konzi/.config/herdr/herdr-client.sock
+2026-07-30T18:17:19.019818Z  INFO herdr::client: handshake succeeded version=17 encoding=SemanticFrame
+2026-07-30T18:21:23.237171Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=1187329
+2026-07-30T18:21:25.735467Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=1195251
+2026-07-30T18:21:25.735528Z  INFO herdr::client: connecting to server path=/home/konzi/.config/herdr/herdr-client.sock
+2026-07-30T18:21:25.776061Z  INFO herdr::client: handshake succeeded version=17 encoding=SemanticFrame
+2026-07-30T18:23:11.804711Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=1195251
+2026-07-30T18:23:13.430040Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=1198455
+2026-07-30T18:23:13.430187Z  INFO herdr::client: connecting to server path=/home/konzi/.config/herdr/herdr-client.sock
+2026-07-30T18:23:13.586553Z  INFO herdr::client: handshake succeeded version=17 encoding=SemanticFrame
+2026-07-30T18:23:41.900976Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=1198455
+2026-09-04T08:13:51.938180Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=152524
+2026-09-04T08:13:51.939740Z  INFO herdr::client: connecting to server path=/home/konzi/.config/herdr/herdr-client.sock
+2026-09-04T08:13:51.953907Z  INFO herdr::client: handshake succeeded version=20 encoding=SemanticFrame
+2026-09-04T08:21:44.273155Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=152524
+2026-09-14T16:06:54.966737Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=316103
+2026-09-14T16:06:54.966994Z  INFO herdr::client: connecting to server path=/home/konzi/.config/herdr/herdr-client.sock
+2026-09-14T16:06:54.970829Z  INFO herdr::client::handshake: endpoint handshake succeeded generation=1 server_version=0.9.0
+2026-09-14T16:14:47.637314Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=316103

@@ -1,0 +1,25 @@
+#theme 
+theme = dark:Catppuccin Frappe,light:Catppuccin Latte
+#fonts
+font-size = 14
+
+
+#opcaity 
+# background-opacity = 0.8
+# selection-background = #ffffff
+cursor-opacity = 0.3
+
+
+#binds
+keybind = cmd+ctrl+t=toggle_window_decorations
+
+#window rules
+window-padding-balance = true
+window-padding-x = 10
+window-padding-y = 6,4
+window-decoration = client
+window-padding-color = extend
+window-show-tab-bar = never
+title = " "
+window-theme = dark
+#window-save-state = always

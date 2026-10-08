@@ -12,101 +12,116 @@
   "exclusive": true,
   "passthrough": false,
   "gtk-layer-shell": true,
-  "output": ["eDP-1", "HDMI-A-1"],
-
+  // "output": ["eDP-1", "HDMI-A-1"],
   "modules-left": [
     "hyprland/workspaces",
     "network",
     "bluetooth",
-    "wlr/taskbar",
-    "custom/screenshot",
+    "group/screenandpicker",
+    // "custom/screenshot",
+    // "custom/colorpicker",
+    // "tray"
+    "group/trayapp",
+   "custom/blackout"
   ],
-
   "modules-center": [
+    "custom/playerctl",
     "custom/vpn",
-    "custom/spotify",
   ],
-
   "modules-right": [
+     "custom/herdr",
     "backlight",
-    "pulseaudio#input",
-    "pulseaudio#output",
+    // "pulseaudio#input",
+    // "pulseaudio#output",
     "hyprland/language",
     "battery",
-    "clock#date",
-    "clock",
-    "custom/power"
+    // "clock#date",
+    // "clock",
+    "group/audio",
+    "group/timedate",
+    "custom/notification",
   ],
-
   "hyprland/workspaces": {
+    "disable-scroll": true,
     "all-outputs": false,
+    "active-only": false,
     "on-click": "activate",
-    "persistent-workspaces": {
-      "eDP-1": [
-        1,
-        2,
-        3,
-        4
-      ],
-      "HDMI-A-1": [
-        5,
-        6,
-        7,
-        8
-      ],
-    },
-    "format": "{icon}",
+    "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"m-1\" })' > /dev/null",
+    "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"m+1\" })' > /dev/null",
     "format-icons": {
-      "urgent": "",
-      "focused": "",
-      "default": ""
-    }
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      // "urgent": "",
+      // "focused": "",
+      // "default": "",
+    },
+    // "on-scroll-up": "hyprctl dispatch workspace e-1",
+    // "on-scroll-down": "hyprctl dispatch workspace e+1",
+    // "persistent-workspaces": {
+    //   "eDP-1": [1, 2, 3, 4],
+    //   "HDMI-A-1": [5, 6, 7, 8],
+    // },
+    // "format": "{icon}",
+    // "format-icons": {
+    //   "urgent": "󰫈",
+    //   "focused": "󰫈",
+    //   "default": "󰫈",
+    // },
   },
-
   "clock": {
     "interval": 60,
     // "timezone": "Europe/Kyiv",
-    "format": "{:%H:%M}",
+    "format": "{:%H:%M }",
     "tooltip": false,
   },
   "clock#date": {
-	"interval": 60,
-  // "timezone": "Europe/Kyiv",
-	"format": "{:%m.%d %a}",
-  // "tooltip-format": "<tt><small>{calendar}</small></tt>",
-  "tooltip": false,
+    "interval": 60,
+    // "timezone": "Europe/Kyiv",
+    "format": "{:%d.%m %a }",
+    // "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "tooltip": false,
   },
-
-
   "battery": {
+    "bat": "BAT0",
     "interval": 60,
     "states": {
-      "good": 95,
       "warning": 30,
-      "critical": 15
+      "critical": 15,
     },
-    "format": "{icon}  {capacity}%",
-    "format-full": "{icon} {capacity}%",
-    "format-plugged": "{icon} {capacity}%",
-    "format-alt": "{icon}",
+    "events": {
+      "on-discharging-warning": "notify-send -u normal 'Low Battery'",
+      "on-discharging-critical": "notify-send -u critical 'Very Low Battery'",
+      "on-charging-100": "notify-send -u normal 'Battery Full!'",
+      "on-discharging": "notify-send -u normal 'Power Switch' Discharging",
+      "on-charging": "notify-send -u normal 'Power Switch' Charging'"
+    },
+    "format": "{icon}{capacity}%",
+    // "format-full": "{icon} {capacity}%",
+    // "format-plugged": "{icon} {capacity}%",
+    // "format-alt": "{icon}",
     "format-icons": [
       " ",
       " ",
       " ",
       " "
     ],
-    "tooltip": true,
-    "max-length": 25,
+    "tooltip": false,
+    //"max-length": 25,
   },
-
   "hyprland/language": {
-    "format": "󰌌  {}",
+    "format": "󰌌 {}",
     "format-en": "EN",
     "format-uk": "UA",
     // "keyboard-name":  "at-translated-set-2-keyboard",
     "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
   },
-
   "network": {
     "interval": 1,
     "format": "{ifname}%%",
@@ -118,173 +133,218 @@
     "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
     "tooltip-format-ethernet": "{ifname} 󰌘",
     "tooltip-format-disconnected": "󰌙 Disconnected",
-    "max-length": 25,
-    "min-length": 10,
+    //"max-length": 25,
+    "min-length": 25,
     "format-icons": [
-      "󰤯",
-      "󰤟",
-      "󰤢",
-      "󰤥",
-      "󰤨"
-    ]
+      "󰤯 ",
+      "󰤟 ",
+      "󰤢 ",
+      "󰤥 ",
+      "󰤨 "
+    ],
   },
-
   "pulseaudio#input": {
-    "format": "{format_source}",
-    "format-source": "  {volume}%",
-    "format-source-muted": "  {volume}%",
+    "format": "{format_source} ",
+    "format-source": " {volume}% ",
+    "format-source-muted": " {volume}% ",
     "max-volume": 100,
     "scroll-step": 1,
     "smooth-scrolling-threshold": 1,
     "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
     "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +1%",
     "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%",
-    "tooltip": false
+    "tooltip": false,
   },
-
   "pulseaudio#output": {
-    "format": "{icon}  {volume}%",
-    "format-muted": "  {volume}%",
-    "format-bluetooth": "{icon}  {volume}% ",
+    "format": "{icon}{volume}% ",
+    "format-muted": " {volume}% ",
+    "format-bluetooth": "{icon}{volume}% ",
     "format-icons": {
-        "default": ["", "", ""],
+      "default": [
+        " ",
+        " ",
+        "  ",
+      ],
     },
     "max-volume": 100,
     "scroll-step": 5,
     "smooth-scrolling-threshold": 1,
-    "on-click": "pavucontrol",
-    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    "tooltip": false
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pavucontrol",
+    "tooltip": false,
   },
 
-
+  "group/audio": {
+    "orientation": "inherit",
+    "spacing": 10,
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "not-power3",
+            "transition-left-to-right": false,
+        },
+		"modules": [
+		 "pulseaudio#output",
+			"pulseaudio#input",
+		]
+	},
+	"group/timedate": {
+    "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "not-power2",
+            "transition-left-to-right": false,
+        },
+			"modules": [
+			"clock",
+			"clock#date",
+			]
+		},
   "bluetooth": {
-    "format": " {status}",
+    "format": "{status}",
     "format-connected": " {device_alias}",
     "format-connected-battery": " {device_alias} {device_battery_percentage}%",
     "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
     "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
-    "on-click": "bluetuith",
+    "on-click": "ghostty -e bluetuith",
   },
-
   "custom/screenshot": {
-    "format": "  ",
+    "format": " ",
     "tooltip": false,
+    "icon-size": 14,
     // "tooltip-format": "Left click to select a region \nRight click to select from among active windows",
-    "on-click": "grim -g \"$(slurp)\" ~/screenshot_$(date +%Y%m%d_%H%M%S).png",
-    //  "on-click-right": "grim -g \"$(swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | \"\\(.rect.x+.window_rect.x),\\(.rect.y+.window_rect.y) \\(.window_rect.width)x\\(.window_rect.height)\"' | slurp)\"\n"
-    
+    "on-click": "FILE=~/Screenshot/screenshot_$(date +%Y%m%d_%H%M%S).png && grim -g \"$(slurp)\" $FILE && wl-copy < $FILE && notify-send \"The screenshot is ready\" \"Saved as $FILE\" -i $FILE",
+    "on-click-right": "FILE=~/Screenshot/screenshot_$(date +%Y%m%d_%H%M%S).png && GEOM=$(hyprctl activewindow -j | jq -r '\"\\(.at[0]),\\(.at[1]) \\(.size[0])x\\(.size[1])\"') && grim -g \"$GEOM\" \"$FILE\" && wl-copy < \"$FILE\" && notify-send \"The screenshot is ready\" \"Saved as $FILE\" -i \"$FILE\"",
+    //"on-click-right": "FILE=~/Screenshot/screenshot_$(date +%Y%m%d_%H%M%S).png && grim $FILE && wl-copy < $FILE && notify-send 'Screenshot of the screen' 'Saved and copied' -i $FILE",
   },
-  
-  "custom/vpn":{
-    "interval":3,
-    "format": "{}",
-    "exec": "  ip add show | grep -qF wg0 &&  echo  󰿇 Connected ||  echo  󰌾 Disconnected",
-    "max-length": "100",
-    "on-click": "mullvad connect",
-    "on-click-right": "mullvad disconnect"
-  },
-  "custom/power": {
-    "format": "",
+  "custom/colorpicker": {
+    "format": " ",
+    "on-click": "hyprpicker -a -n",
     "tooltip": false,
-    "on-click": "hyprlock",
   },
-   "backlight": {
-    "format": "{icon}  {percent}%",
+  "group/screenandpicker": {
+     "orientation": "inherit",
+         "drawer": {
+             "transition-duration": 500,
+             "children-class": "not-power1",
+             "transition-left-to-right": true,
+         },
+			"modules": [
+			"custom/screenshot",
+			"custom/colorpicker",
+			]
+		},
+  "custom/notification": {
+    "tooltip": false,
+    "icon-size": 14,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "span foreground='red'><sup></sup></span>",
+      "dnd-none": "󰂛",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": "",
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true,
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon} {percent}%",
     "format-icons": [
       "󰪡",
       "󰪥"
     ],
     "tooltip": false,
   },
-  "custom/spotify": {
-  "exec": "/home/konzi/.config/scripts/envname/bin/python3  /home/konzi/.config/scripts/mediaplayer.py --player=spotify ",
-  "format": "{text}",
-  "format-disabled": "Inactive",
-  "return-type": "json",
-  "spacing": 0,
-  "margin": 0,
-  "max-length": 45,
-  "on-click": "playerctl play-pause",
-  "on-click-right": "spotify",
-  "on-scroll-up": "playerctl next",
-  "on-scroll-down": "playerctl previous"
+  "custom/playerctl": {
+    "interval": 1,
+    "format": "{icon} {text}",
+    "max-length": 45,
+    "exec": "~/.config/scripts/songname.sh -json",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+    "smooth-scrolling-threshold": 2,
+    "return-type": "json",
+    "tooltip": false,
+    "format-icons": {
+      "Playing": "",
+      "Paused": "",
+    },
   },
-  "wlr/taskbar": {
-	"format": "{icon}",
-	"icon-size": 14,
-	"icon-theme": "Numix-Circle",
-	"tooltip-format":false,
-  "tooltip":false,
-	"on-click": "activate",
-	"on-click-middle": "close",
-	"ignore-list": [
-	    "Alacritty",
-      "code",
-      "thunar",
-      "obsidian",
-      "mullvad",
-      "btop",
-      "seahorse",
-      "pavucontrol",
+  "tray": {
+    "icon-size": 14,
+    "spacing":2,
+    "icons": {
+      "signal-desktop": "$HOME/.local/share/icons/hicolor/16x16/apps/signal-desktop.png"
+    }
+  },
+  "custom/tray-toggle": {
+      "format": "󱃵 ", // іконка кнопки відкриття/закриття
+      "tooltip": false
+  },
+  "group/trayapp": {
 
-	],
-	"app_ids-mapping": {
-		"firefox": "firefox-developer-edition",
-    "telegram": "telegram",
-    "discord": "discord",
-    "obs": "obs",
-    "chrome": "google-chrome-stable"
-	},
-	"rewrite": {
-		"Firefox Web Browser": "Firefox",
-		"Foot Server": "Terminal"
-	}
+     "orientation": "inherit",
+         "drawer": {
+             "transition-duration": 700,
+             "children-class": "not-power",
+             "transition-left-to-right": true,
+         },
+			"modules": [
+			"custom/tray-toggle",
+			 "tray"
+			]
+		},
+	 "custom/herdr": {
+      "exec": "~/.config/scripts/statusherdr.sh",
+      "interval": 20,
+      "return-type": "json"
+    },
+
+    "custom/blackout": {
+      "exec": "~/.config/scripts/blackout",
+      "return-type": "json",
+    "interval": 3600,
+    "format": "{icon}",
+    "format-icons": {
+        "on": "󰌵 ",
+        "off": "󰹏 "
+      },
+    "max-length": 350,
+    "tooltip": true,
+    "on-click": "~/.config/scripts/blackout"
+    },
 }
 
-}
 
-
-
-
-  //"custom/obs-status",
-  // chmod +x ~/.config/scripts/obs-status.sh
-  // "custom/obs-status": {
-  //       "format": "{}",
-  //       "return-type": "json", // Це може знадобитися, якщо ваш скрипт виводить JSON
-  //       "exec": "~/.config/waybar/scripts/obs-status.sh",
-  //       "interval": 2 // Перевіряти стан кожні 2 секунди
-  //   },
-
-  // "custom/power"
-  // "custom/power": {
-  //   "format": "⏻",
-  //   "tooltip-format": "Power",
-  //   "on-click": "~/.config/rofi/powermenu/type-1/powermenu.sh",
-  // },
-
-  // "backlight#monitor1",
-  //  "backlight#monitor1": {
-  //   "device": ["intel_backlight", "nvidia_backlight"],
-  //   "format": "{percent}% {icon}",
-  //   "format-icons": [
-  //     "󱎕",
-  //     ""
-  //   ]
-  // },
-  
-  //   "custom/spotify": {
-  //     "exec": "/home/konzi/.config/scripts/envname/bin/python3  /home/konzi/.config/scripts/mediaplayer.py --player=spotify ",
-  //     "format": "{text}",
-  //     // "interval": 30,
-  //     "return-type": "json",
-  //     "spacing": 0,
-  //     "margin": 0,
-  //     "max-length": 45,
-  //     "on-click": "playerctl play-pause",
-  //     "on-click-right": "spotify",
-  //     "on-scroll-up": "playerctl next",
-  //     "on-scroll-down": "playerctl previous"
-  // }
+// "custom/vpn": {
+//   "interval": 3,
+//   "format": "{}",
+//   "exec": "  ip add show | grep -qF wg0 &&  echo  󰿇 Connected ||  echo  󰌾 Disconnected",
+//   "max-length": "100",
+//   "on-click": "mullvad connect",
+//   "on-click-right": "mullvad disconnect"
+// },
+// "custom/spotify": {
+// "exec": "/home/konzi/.config/scripts/envname/bin/python3  /home/konzi/.config/scripts/mediaplayer.py --player=spotify ",
+// "format": "{text}",
+// "format-disabled": "Inactive",
+// "return-type": "json",
+// "spacing": 0,
+// "margin": 0,
+// "max-length": 45,
+// "on-click": "playerctl play-pause",
+// "on-click-right": "spotify",
+// "on-scroll-up": "playerctl next",
+// "on-scroll-down": "playerctl previous"
+// },

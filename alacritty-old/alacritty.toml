@@ -1,10 +1,14 @@
 [terminal]
 osc52 =  "CopyPaste"
 
+[env]
+TERM = "screen-256color"
+
 [window]
+#focus_reporting = false
 #padding = { x = 15, y = 15 }
 dimensions = { columns = 120, lines = 40 }
-dynamic_padding = true 
+dynamic_padding = false
 decorations =  "Buttonless"
 opacity = 0.98
 
@@ -22,13 +26,21 @@ bindings = [
     { key  = "J", mods = "Control|Shift", action = "ScrollPageDown" },
 ]
 
-[font]
-size = 15
-offset = { x = 5, y = 2}
-normal = { family = "JetBrainsMonoNL Nerd Font", style = "Normal" }
-bold = { family = "JetBrainsMonoNL Nerd Font", style = "Bold" }
-italic = { family = "JetBrainsMonoNL Nerd Font", style = "Italic" }
+#[font]
+#size = 15
+#offset = { x = 5, y = 2}
+#normal = { family = "JetBrainsMono Nerd Font Mono", style = "Normal" }
+#bold = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
+#italic = { family = "JetBrainsMono Nerd Font Mono", style = "Italic" }
 
+
+#[font]
+#size = 15
+#offset = { x = 5, y = 2}
+#normal = { family = "MonoSpace", style = "Normal" }
+#bold = { family = "MonoSpace", style = "Bold" }
+#italic = { family = "MonoSpace", style = "Italic" }
+#builtin_box_drawing = false
 
 [colors.primary]
 background = '#1c2023'

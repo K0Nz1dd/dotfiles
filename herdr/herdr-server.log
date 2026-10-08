@@ -1,0 +1,247 @@
+2026-07-30T15:30:59.181194Z  INFO herdr::api::server: api server listening path=/home/konzi/.config/herdr/herdr.sock
+2026-07-30T15:30:59.184778Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-07-30T15:30:59.347042Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-30T15:30:59.352703Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-07-30T15:30:59.354778Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=871780
+2026-07-30T15:30:59.355225Z  INFO herdr::logging: workspace created event="workspace.create" subsystem="workspace" outcome="ok" workspace_id="w1" pane_id=1
+2026-07-30T15:30:59.355264Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w1"
+2026-07-30T15:30:59.355287Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-07-30T15:30:59.355296Z  INFO herdr::server::headless: created startup workspace cwd=/home/konzi
+2026-07-30T15:30:59.355418Z  INFO herdr::server::headless: client protocol socket listening path=/home/konzi/.config/herdr/herdr-client.sock
+2026-07-30T15:30:59.355508Z  INFO herdr::server::headless: herdr server started api_socket=/home/konzi/.config/herdr/herdr.sock client_socket=/home/konzi/.config/herdr/herdr-client.sock
+2026-07-30T15:30:59.357683Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=871734
+2026-07-30T15:30:59.616565Z  INFO herdr::server::headless: client connected client_id=2 cols=168 rows=37 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-07-30T15:31:04.360297Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/konzi/.config/herdr/session.json workspaces=1
+2026-07-30T15:31:25.861992Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/konzi/.config/herdr/session.json workspaces=1
+2026-07-30T15:31:44.862303Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=1 status="ExitStatus { code: 0, signal: None }"
+2026-07-30T15:31:44.862576Z  INFO herdr::pane: pane session terminated pane=1 pid=871780 signal=Hangup
+2026-07-30T15:31:44.862855Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=2 rows=36 cols=142 scrollback_limit_bytes=10000000
+2026-07-30T15:31:44.865101Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=2 pid=873350
+2026-07-30T15:31:44.865440Z  INFO herdr::logging: workspace created event="workspace.create" subsystem="workspace" outcome="ok" workspace_id="w2" pane_id=2
+2026-07-30T15:31:44.865463Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w2"
+2026-07-30T15:31:44.865685Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w2" tab_id="w2:t1"
+2026-07-30T15:31:49.881374Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/konzi/.config/herdr/session.json workspaces=1
+2026-07-30T15:31:50.147695Z  INFO herdr::server::headless: client disconnected client_id=2
+2026-07-30T16:00:59.355416Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-30T16:30:59.350298Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-30T17:00:59.351363Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-30T17:30:59.353703Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-30T18:00:59.353551Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-07-30T18:17:19.020089Z  INFO herdr::server::headless: client connected client_id=4 cols=168 rows=37 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-07-30T18:17:22.031543Z  INFO herdr::pane: agent changed pane=2 previous_agent=None agent=Some(OpenCode) process=opencode pgid=Some(1187429)
+2026-07-30T18:18:02.998133Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=3 rows=36 cols=142 scrollback_limit_bytes=10000000
+2026-07-30T18:18:03.015855Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=3 pid=1188599
+2026-07-30T18:18:03.016848Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w2" tab_id="w2:t2"
+2026-07-30T18:18:04.100019Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w2" tab_id="w2:t1"
+2026-07-30T18:18:04.463175Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w2" tab_id="w2:t1"
+2026-07-30T18:18:05.233707Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w2" tab_id="w2:t2"
+2026-07-30T18:18:07.890846Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w2" tab_id="w2:t1"
+2026-07-30T18:18:12.898872Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/konzi/.config/herdr/session.json workspaces=1
+2026-07-30T18:18:15.268602Z  INFO herdr::server::headless: client resize client_id=4 cols=168 rows=39 cell_width_px=0 cell_height_px=0
+2026-07-30T18:18:18.643877Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w2"
+2026-07-30T18:18:18.644060Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w2" tab_id="w2:t1"
+2026-07-30T18:18:19.290067Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w2"
+2026-07-30T18:18:19.290483Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w2" tab_id="w2:t1"
+2026-07-30T18:18:24.292242Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/konzi/.config/herdr/session.json workspaces=1
+2026-07-30T18:18:27.567293Z  INFO herdr::pane: agent changed pane=2 previous_agent=Some(OpenCode) agent=None pgid=Some(873350)
+2026-07-30T18:18:27.632356Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=2 status="ExitStatus { code: 0, signal: None }"
+2026-07-30T18:18:27.632746Z  INFO herdr::pane: pane session terminated pane=2 pid=873350 signal=Hangup
+2026-07-30T18:18:28.315754Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=3 status="ExitStatus { code: 0, signal: None }"
+2026-07-30T18:18:28.316076Z  INFO herdr::pane: pane session terminated pane=3 pid=1188599 signal=Hangup
+2026-07-30T18:18:28.316755Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=4 rows=38 cols=142 scrollback_limit_bytes=10000000
+2026-07-30T18:18:28.320765Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=4 pid=1189387
+2026-07-30T18:18:28.321300Z  INFO herdr::logging: workspace created event="workspace.create" subsystem="workspace" outcome="ok" workspace_id="w3" pane_id=4
+2026-07-30T18:18:28.321346Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w3"
+2026-07-30T18:18:28.321694Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1"
+2026-07-30T18:18:28.818909Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=4 status="ExitStatus { code: 0, signal: None }"
+2026-07-30T18:18:28.819190Z  INFO herdr::pane: pane session terminated pane=4 pid=1189387 signal=Hangup
+2026-07-30T18:18:28.819905Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=5 rows=38 cols=142 scrollback_limit_bytes=10000000
+2026-07-30T18:18:28.822638Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=5 pid=1189430
+2026-07-30T18:18:28.823035Z  INFO herdr::logging: workspace created event="workspace.create" subsystem="workspace" outcome="ok" workspace_id="w4" pane_id=5
+2026-07-30T18:18:28.823058Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w4"
+2026-07-30T18:18:28.823328Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t1"
+2026-07-30T18:18:30.364720Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=5 status="ExitStatus { code: 0, signal: None }"
+2026-07-30T18:18:30.365229Z  INFO herdr::pane: pane session terminated pane=5 pid=1189430 signal=Hangup
+2026-07-30T18:18:30.366044Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=6 rows=38 cols=142 scrollback_limit_bytes=10000000
+2026-07-30T18:18:30.369916Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=6 pid=1189530
+2026-07-30T18:18:30.370486Z  INFO herdr::logging: workspace created event="workspace.create" subsystem="workspace" outcome="ok" workspace_id="w5" pane_id=6
+2026-07-30T18:18:30.370512Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w5"
+2026-07-30T18:18:30.370749Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w5" tab_id="w5:t1"
+2026-07-30T18:18:34.355780Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=6 status="ExitStatus { code: 130, signal: None }"
+2026-07-30T18:18:34.356160Z  INFO herdr::pane: pane session terminated pane=6 pid=1189530 signal=Hangup
+2026-07-30T18:18:34.358381Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=7 rows=38 cols=142 scrollback_limit_bytes=10000000
+2026-07-30T18:18:34.363537Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=7 pid=1189674
+2026-07-30T18:18:34.364611Z  INFO herdr::logging: workspace created event="workspace.create" subsystem="workspace" outcome="ok" workspace_id="w6" pane_id=7
+2026-07-30T18:18:34.364683Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w6"
+2026-07-30T18:18:34.365203Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t1"
+2026-07-30T18:18:36.426500Z  INFO herdr::pane: agent changed pane=7 previous_agent=None agent=Some(OpenCode) process=opencode pgid=Some(1189773)
+2026-07-30T18:18:39.403412Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/konzi/.config/herdr/session.json workspaces=1
+2026-07-30T18:19:23.264236Z  INFO herdr::pane: agent changed pane=7 previous_agent=Some(OpenCode) agent=None pgid=Some(1189674)
+2026-07-30T18:20:47.209125Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=8 rows=38 cols=142 scrollback_limit_bytes=10000000
+2026-07-30T18:20:47.211965Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=8 pid=1194146
+2026-07-30T18:20:47.212825Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t2"
+2026-07-30T18:20:52.220142Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/konzi/.config/herdr/session.json workspaces=1
+2026-07-30T18:21:00.642008Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w6"
+2026-07-30T18:21:00.642421Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t2"
+2026-07-30T18:21:05.644825Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/konzi/.config/herdr/session.json workspaces=1
+2026-07-30T18:21:06.770401Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t1"
+2026-07-30T18:21:07.058742Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t1"
+2026-07-30T18:21:07.635009Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t2"
+2026-07-30T18:21:08.549091Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t1"
+2026-07-30T18:21:13.552773Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/konzi/.config/herdr/session.json workspaces=1
+2026-07-30T18:21:23.234608Z  INFO herdr::server::headless: client detach requested via keybind client_id=4
+2026-07-30T18:21:23.246728Z  INFO herdr::server::headless: client disconnected client_id=4
+2026-07-30T18:21:25.776381Z  INFO herdr::server::headless: client connected client_id=6 cols=168 rows=39 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-07-30T18:21:29.873524Z  INFO herdr::pane: agent changed pane=7 previous_agent=None agent=Some(OpenCode) process=opencode pgid=Some(1195366)
+2026-07-30T18:21:35.552970Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t2"
+2026-07-30T18:21:40.555647Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/konzi/.config/herdr/session.json workspaces=1
+2026-07-30T18:22:11.644872Z  INFO herdr::pane: agent changed pane=8 previous_agent=None agent=Some(Antigravity) process=agy pgid=Some(1196719)
+2026-07-30T18:22:13.986923Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t1"
+2026-07-30T18:22:18.990322Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/konzi/.config/herdr/session.json workspaces=1
+2026-07-30T18:23:11.799833Z  INFO herdr::server::headless: client detach requested via keybind client_id=6
+2026-07-30T18:23:11.819796Z  INFO herdr::server::headless: client disconnected client_id=6
+2026-07-30T18:23:13.586602Z  INFO herdr::server::headless: client connected client_id=8 cols=168 rows=39 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-07-30T18:23:41.898709Z  INFO herdr::server::headless: client detach requested via keybind client_id=8
+2026-07-30T18:23:41.910161Z  INFO herdr::server::headless: client disconnected client_id=8
+2026-09-04T08:13:51.445365Z  INFO herdr::api::server: api server listening path=/home/konzi/.config/herdr/herdr.sock
+2026-09-04T08:13:51.468893Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-09-04T08:13:51.481814Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=152531
+2026-09-04T08:13:51.484093Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=2 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-09-04T08:13:51.486949Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=2 pid=152534
+2026-09-04T08:13:51.489104Z  INFO herdr::logging: session restore evaluated event="persist.restore" subsystem="persist" outcome="ok" workspaces=1
+2026-09-04T08:13:51.489241Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-09-04T08:13:51.885865Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-04T08:13:51.898961Z  INFO herdr::server::headless: restored session already has workspaces; ignoring startup cwd cwd=/home/konzi
+2026-09-04T08:13:51.899177Z  INFO herdr::server::headless: client protocol socket listening path=/home/konzi/.config/herdr/herdr-client.sock
+2026-09-04T08:13:51.899243Z  INFO herdr::server::headless: herdr server started api_socket=/home/konzi/.config/herdr/herdr.sock client_socket=/home/konzi/.config/herdr/herdr-client.sock
+2026-09-04T08:13:51.902911Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=152525
+2026-09-04T08:13:51.954940Z  INFO herdr::server::headless: client connected client_id=2 cols=168 rows=37 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-09-04T08:14:06.088179Z  INFO herdr::server::headless: client resize client_id=2 cols=168 rows=39 cell_width_px=0 cell_height_px=0
+2026-09-04T08:16:14.710855Z  INFO herdr::pane: agent changed pane=1 previous_agent=None agent=Some(Antigravity) process=agy pgid=Some(157091)
+2026-09-04T08:16:21.121215Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w6"
+2026-09-04T08:16:21.121317Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t1"
+2026-09-04T08:16:21.267772Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w6"
+2026-09-04T08:16:21.267852Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t1"
+2026-09-04T08:16:21.448365Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w6"
+2026-09-04T08:16:21.448481Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t1"
+2026-09-04T08:16:21.965794Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w6"
+2026-09-04T08:16:21.965877Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t1"
+2026-09-04T08:16:22.147904Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w6"
+2026-09-04T08:16:22.147982Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t1"
+2026-09-04T08:16:27.149660Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/konzi/.config/herdr/session.json workspaces=1
+2026-09-04T08:16:34.590019Z  INFO herdr::logging: workspace renamed event="workspace.rename" subsystem="workspace" outcome="ok" workspace_id="w6"
+2026-09-04T08:16:42.352309Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t2"
+2026-09-04T08:16:43.154710Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t1"
+2026-09-04T08:16:48.157039Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/konzi/.config/herdr/session.json workspaces=1
+2026-09-04T08:16:49.812071Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t2"
+2026-09-04T08:16:54.815577Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/konzi/.config/herdr/session.json workspaces=1
+2026-09-04T08:16:55.496244Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t1"
+2026-09-04T08:17:01.840592Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t2"
+2026-09-04T08:17:04.485200Z  INFO herdr::pane: agent changed pane=2 previous_agent=None agent=Some(OpenCode) process=opencode pgid=Some(158654)
+2026-09-04T08:17:06.841926Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/konzi/.config/herdr/session.json workspaces=1
+2026-09-04T08:17:21.098260Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/konzi/.config/herdr/session.json workspaces=1
+2026-09-04T08:17:23.404794Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t1"
+2026-09-04T08:17:23.920097Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t2"
+2026-09-04T08:17:26.846105Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w6"
+2026-09-04T08:17:26.846179Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t2"
+2026-09-04T08:17:26.846231Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t2"
+2026-09-04T08:17:26.850994Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=2 status="ExitStatus { code: 1, signal: None }"
+2026-09-04T08:17:27.147220Z  INFO herdr::pane: pane session terminated pane=2 pid=152534 signal=Terminate
+2026-09-04T08:17:27.147590Z  WARN herdr::app::actions: PaneDied for unknown pane pane=2
+2026-09-04T08:17:32.150309Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/konzi/.config/herdr/session.json workspaces=1
+2026-09-04T08:18:09.883105Z  INFO herdr::server::headless: client resize client_id=2 cols=82 rows=39 cell_width_px=0 cell_height_px=0
+2026-09-04T08:18:11.786863Z  INFO herdr::server::headless: client resize client_id=2 cols=168 rows=39 cell_width_px=0 cell_height_px=0
+2026-09-04T08:18:13.690268Z  INFO herdr::server::headless: client resize client_id=2 cols=82 rows=39 cell_width_px=0 cell_height_px=0
+2026-09-04T08:18:15.093729Z  INFO herdr::server::headless: client resize client_id=2 cols=168 rows=39 cell_width_px=0 cell_height_px=0
+2026-09-04T08:18:35.436557Z  INFO herdr::server::headless: client resize client_id=2 cols=82 rows=39 cell_width_px=0 cell_height_px=0
+2026-09-04T08:18:36.738576Z  INFO herdr::server::headless: client resize client_id=2 cols=168 rows=39 cell_width_px=0 cell_height_px=0
+2026-09-04T08:19:41.212260Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t1"
+2026-09-04T08:19:46.215446Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/konzi/.config/herdr/session.json workspaces=1
+2026-09-04T08:20:48.813824Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=3 rows=38 cols=145 scrollback_limit_bytes=10000000
+2026-09-04T08:20:48.818135Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=3 pid=165734
+2026-09-04T08:20:48.818938Z  INFO herdr::logging: workspace created event="workspace.create" subsystem="workspace" outcome="ok" workspace_id="w7" pane_id=3
+2026-09-04T08:20:48.818981Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w7"
+2026-09-04T08:20:48.819069Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w7" tab_id="w7:t1"
+2026-09-04T08:20:53.824318Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/konzi/.config/herdr/session.json workspaces=2
+2026-09-04T08:20:59.589368Z  INFO herdr::logging: workspace renamed event="workspace.rename" subsystem="workspace" outcome="ok" workspace_id="w7"
+2026-09-04T08:21:04.592445Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/konzi/.config/herdr/session.json workspaces=2
+2026-09-04T08:21:06.966706Z  INFO herdr::pane: agent changed pane=3 previous_agent=None agent=Some(OpenCode) process=opencode pgid=Some(166311)
+2026-09-04T08:21:23.634878Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w6"
+2026-09-04T08:21:23.634946Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t1"
+2026-09-04T08:21:25.107767Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w7"
+2026-09-04T08:21:25.107842Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w7" tab_id="w7:t1"
+2026-09-04T08:21:26.045030Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w6"
+2026-09-04T08:21:26.045119Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t1"
+2026-09-04T08:21:26.782767Z  INFO herdr::app::actions: copied selection to clipboard
+2026-09-04T08:21:31.047488Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/konzi/.config/herdr/session.json workspaces=2
+2026-09-04T08:21:44.272197Z  INFO herdr::server::headless: client resize client_id=2 cols=80 rows=24 cell_width_px=0 cell_height_px=0
+2026-09-04T08:21:44.282638Z  INFO herdr::server::headless: client detached client_id=2
+2026-09-04T08:21:44.284977Z  INFO herdr::server::headless: client disconnected client_id=2
+2026-09-14T16:06:54.475524Z  INFO herdr::api::server: api server listening path=/home/konzi/.config/herdr/herdr.sock
+2026-09-14T16:06:54.489654Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-09-14T16:06:54.500821Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=316112
+2026-09-14T16:06:54.502113Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=2 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-09-14T16:06:54.504697Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=2 pid=316115
+2026-09-14T16:06:54.505441Z  INFO herdr::logging: session restore evaluated event="persist.restore" subsystem="persist" outcome="ok" workspaces=2
+2026-09-14T16:06:54.506076Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-09-14T16:06:54.940192Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-14T16:06:54.943812Z  INFO herdr::server::headless::bootstrap: restored session already has workspaces; ignoring startup cwd cwd=/home/konzi
+2026-09-14T16:06:54.945037Z  INFO herdr::server::headless: client protocol socket listening path=/home/konzi/.config/herdr/herdr-client.sock
+2026-09-14T16:06:54.946210Z  INFO herdr::server::headless::bootstrap: herdr server started api_socket=/home/konzi/.config/herdr/herdr.sock client_socket=/home/konzi/.config/herdr/herdr-client.sock
+2026-09-14T16:06:54.949290Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=316105
+2026-09-14T16:06:54.970813Z  INFO herdr::server::headless: client connected client_id=2 cols=142 rows=35 cell_width_px=11 cell_height_px=25 surface_active=true render_encoding=SemanticFrame
+2026-09-14T16:06:55.091238Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="letta"
+2026-09-14T16:06:57.694769Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w7"
+2026-09-14T16:06:57.694827Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w7" tab_id="w7:t1"
+2026-09-14T16:06:57.694941Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w7"
+2026-09-14T16:06:57.694987Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w7" tab_id="w7:t1"
+2026-09-14T16:06:58.445911Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w6"
+2026-09-14T16:06:58.445996Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t1"
+2026-09-14T16:06:58.446124Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w6"
+2026-09-14T16:06:58.446251Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t1"
+2026-09-14T16:06:58.890296Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w6"
+2026-09-14T16:06:58.890377Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t1"
+2026-09-14T16:06:59.084178Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w6"
+2026-09-14T16:06:59.084245Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t1"
+2026-09-14T16:06:59.882867Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w7"
+2026-09-14T16:06:59.882952Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w7" tab_id="w7:t1"
+2026-09-14T16:06:59.883115Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w7"
+2026-09-14T16:06:59.883146Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w7" tab_id="w7:t1"
+2026-09-14T16:07:00.046763Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w7"
+2026-09-14T16:07:00.046831Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w7" tab_id="w7:t1"
+2026-09-14T16:07:00.260516Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w7"
+2026-09-14T16:07:00.260592Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w7" tab_id="w7:t1"
+2026-09-14T16:07:00.408364Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w7"
+2026-09-14T16:07:00.408431Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w7" tab_id="w7:t1"
+2026-09-14T16:07:05.414880Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/konzi/.config/herdr/session.json workspaces=2
+2026-09-14T16:07:41.398461Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w6"
+2026-09-14T16:07:41.398532Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t1"
+2026-09-14T16:07:41.398661Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w6"
+2026-09-14T16:07:41.398702Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t1"
+2026-09-14T16:07:41.673370Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w6"
+2026-09-14T16:07:41.673416Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t1"
+2026-09-14T16:07:41.846468Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w6"
+2026-09-14T16:07:41.846531Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t1"
+2026-09-14T16:07:42.201205Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w7"
+2026-09-14T16:07:42.201291Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w7" tab_id="w7:t1"
+2026-09-14T16:07:42.201425Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w7"
+2026-09-14T16:07:42.201459Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w7" tab_id="w7:t1"
+2026-09-14T16:07:42.376982Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w7"
+2026-09-14T16:07:42.377049Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w7" tab_id="w7:t1"
+2026-09-14T16:07:47.315640Z  INFO herdr::pane: agent changed pane=2 previous_agent=None agent=Some(OpenCode) process=opencode pgid=Some(321610)
+2026-09-14T16:07:47.380686Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/konzi/.config/herdr/session.json workspaces=2
+2026-09-14T16:14:30.625447Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w7"
+2026-09-14T16:14:30.625490Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w7" tab_id="w7:t1"
+2026-09-14T16:14:35.627397Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/konzi/.config/herdr/session.json workspaces=2
+2026-09-14T16:14:47.631090Z  INFO herdr::server::headless: client detached client_id=2
+2026-09-14T16:36:54.945932Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-09-14T16:36:55.078709Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="letta"
+2026-09-14T16:41:11.213004Z  INFO herdr::server::headless::lifecycle: server shutdown initiated
+2026-09-14T16:41:11.263148Z  INFO herdr::server::headless::lifecycle: completing server shutdown
+2026-09-14T16:41:11.264735Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/konzi/.config/herdr/session.json workspaces=2
+2026-09-14T16:41:11.264781Z  INFO herdr::server::headless: headless server exiting
+2026-09-14T16:41:11.286862Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=1 status="ExitStatus { code: 1, signal: None }"
+2026-09-14T16:41:11.301960Z  INFO herdr::pane: pane session terminated pane=1 pid=316112 signal=Hangup
+2026-09-14T16:41:11.314118Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=2 status="ExitStatus { code: 1, signal: None }"
+2026-09-14T16:41:11.502155Z  INFO herdr::pane: pane session terminated pane=2 pid=316115 signal=Hangup
+2026-09-14T16:41:11.504135Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="server" outcome="completed" pid=316105

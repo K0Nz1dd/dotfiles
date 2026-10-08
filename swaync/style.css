@@ -1,0 +1,69 @@
+:root {
+  --border-radius: 22px;
+  --border: #31363F;
+  --cc-bg: transparent;
+  --widget-background: #222831;
+  --text:    #EEEEEE;
+
+  --padding: calc(var(--border-radius) / 2);
+}
+* {
+  font-size: 20px;
+  font-family: "JetBrainsMono Nerd Font";
+  transition: 100ms;
+  box-shadow: unset;
+}
+.control-center .placeholder {
+  border-radius: var(--border-radius);
+}
+.widget-notifications {
+  min-height: 635px;
+}
+.widgets > .widget{
+  background: var(--widget-background);
+  color: var(--text);
+  border-radius: var(--border-radius);
+  padding: calc(var(--border-radius) / 2);
+  border: var(--border); 
+} 
+
+
+.control-center-list-placeholder {
+  padding: var(--border-radius);
+  
+}
+
+.notification-group ,
+.notification-empty > label,
+.notification-empty > image {
+  color: var(--text);
+  border-radius: var(--border-radius);
+  padding: 8px;
+}
+
+.widget-buttons-grid {
+  font-size: x-large;
+  padding: 5px;
+  margin: 0px 10px 10px 10px;
+  background: var(--widget-background);
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button {
+  margin: 3px;
+  padding: 4px 30px;
+  background: var(--widget-background);
+  color: var(--text);
+  transition: background-color 0.15s ease-in-out;
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button:hover {
+  background: var(--border);
+  color: var(--text);
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button:checked {
+  background: var(--border);
+  color: var(--text);
+}
+
+

@@ -1,0 +1,41 @@
+// "layer-shell": true,
+  // "layer": "overlay",
+  // "control-center-layer": "overlay",
+  // "cssPriority": "user",    
+  
+  // "buttons-grid",
+
+   // "buttons-grid": {
+    //   "actions": [
+    //     {
+    //       "active": true,
+    //       "command": "shutdown -h now",
+    //       "label": "",
+    //       "type": "button"
+    //     },
+    //     {
+    //       "active": true,
+    //       "command": "reboot",
+    //       "label": "󰜉",
+    //       "type": "button"
+    //     },
+    //     {
+    //       "active":true,
+    //       "command":"hyprlock",
+    //       "label":"",
+    //       "type": "button"
+    //     },
+    //     {
+    //       "active":true,
+    //       "command":"exit",
+    //       "label":"󰿅",
+    //       "type": "button"
+    //     }
+    //   ]
+    // },
+
+
+       "label": {
+      "max-lines": 5,
+      "text": "Label Text"
+    }
